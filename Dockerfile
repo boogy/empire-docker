@@ -19,5 +19,5 @@ EXPOSE 80 443 8080
 
 WORKDIR /opt/Empire
 
-ENTRYPOINT /bin/bash
-CMD ["./empire"]
+ENTRYPOINT ["/bin/bash", "-i"]
+CMD ["/opt/Empire/empire"]
