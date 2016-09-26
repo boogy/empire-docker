@@ -6,10 +6,12 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
     && apt-get upgrade -yq \
-    && apt-get install -yq git
+    && apt-get install -yq git python-dev python-pip python-openssl python-cryptography \
+    && pip install --upgrade pip
 
 RUN git clone https://github.com/adaptivethreat/Empire.git /opt/Empire \
     && cd /opt/Empire/setup \
+    && export STAGING_KEY="" \
     && bash install.sh
 
 
