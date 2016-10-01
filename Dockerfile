@@ -13,7 +13,6 @@ RUN git clone https://github.com/adaptivethreat/Empire.git /opt/Empire \
     && export STAGING_KEY="" \
     && bash install.sh
 
-
 EXPOSE 80 443 8080
 
 WORKDIR /opt/Empire
