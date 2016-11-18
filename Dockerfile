@@ -2,6 +2,7 @@ FROM ubuntu:latest
 MAINTAINER boogy <theboogymaster@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update \
     && apt-get upgrade -yq \
     && apt-get install -yq git python-dev python-pip python-openssl python-cryptography \
