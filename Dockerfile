@@ -13,6 +13,7 @@ RUN git clone https://github.com/adaptivethreat/Empire.git /opt/Empire \
     && bash install.sh
 
 EXPOSE 80 443 8080
+
 WORKDIR /opt/Empire
 
 ENTRYPOINT ["/bin/bash", "-i", "-c"]
